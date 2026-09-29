@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Plataforma de Evaluación CS-102</title>
+
+    <!-- Archivo de estilos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  
+    <main id="vista-inicio" class="vista activa">
+
+        <div class="contenedor-inicio">
+
+            <div class="encabezado-institucional">
+                <div class="logo-universidad">
+                    CS
+                </div>
+
+                <div>
+                    <p class="nombre-institucion">
+                        Departamento de Ciencias Computacionales
+                    </p>
+
+                    <p class="codigo-sistema">
+                        Sistema Institucional de Evaluación
+                    </p>
+                </div>
+            </div>
+
+            <section class="tarjeta-inicio">
+
+                <span class="etiqueta">
+                    Evaluación individual
+                </span>
+
+                <h1>
+                    Plataforma de Evaluación de Perfiles CS-102
+                </h1>
+
+                <p class="descripcion">
+                    Instrumento académico diseñado para analizar patrones de
+                    decisión, razonamiento y antecedentes personales mediante
+                    una evaluación estructurada.
+                </p>
+
+                <div class="informacion-prueba">
+
+                    <div>
+                        <span>Modalidad</span>
+                        <strong>Individual</strong>
+                    </div>
+
+                    <div>
+                        <span>Preguntas</span>
+                        <strong>5</strong>
+                    </div>
+
+                    <div>
+                        <span>Estado</span>
+                        <strong>Disponible</strong>
+                    </div>
+
+                </div>
+
+                <button id="btn-ingresar" class="btn-principal">
+                    Ingresar a la prueba
+                </button>
+
+            </section>
+
+            <p class="pie-institucional">
+                CS-102 · Sistema de Evaluación Académica
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <main id="vista-bienvenida" class="vista vista-calida">
+
+        <div class="contenedor-bienvenida">
+    
+            <section class="tarjeta-bienvenida">
+    
+                <span class="detalle-cumple">
+                    Para ti ♥
+                </span>
+    
+                <h2>¡Sorpresa! 🎉</h2>
+    
+                <p class="mensaje-bienvenida">
+                    ¡Hola, hermano! ¿Cómo estás? El día de hoy, por tu cumpleaños,
+                    quiero que hagas este interactivo quiz que preparé para ti.
+                    Espero que te sientas muy bien. Voy a estar acompañándote a lo
+                    largo del recorrido y responde con total sinceridad.
+                    ¡Te quiero mucho!
+                </p>
+    
+                <button id="btn-empezar" class="btn-calido">
+                    Empezar
+                </button>
+    
+            </section>
+    
+        </div>
+    
+    </main>
+
+    <main id="vista-quiz" class="vista vista-quiz">
+
+        <!-- Elementos decorativos de fondo -->
+        <div class="particula particula-1"></div>
+        <div class="particula particula-2"></div>
+        <div class="particula particula-3"></div>
+    
+        <div class="contenedor-quiz">
+    
+            <!-- Parte superior -->
+            <div class="quiz-superior">
+    
+                <span id="numero-pregunta">
+                    Pregunta 1 de 5
+                </span>
+    
+                <span id="porcentaje-progreso">
+                    20%
+                </span>
+    
+            </div>
+    
+            <!-- Barra de progreso -->
+            <div class="barra-progreso">
+    
+                <div
+                    id="progreso"
+                    class="progreso"
+                    style="width: 20%;">
+                </div>
+    
+            </div>
+    
+    
+            <!-- Tarjeta de la pregunta -->
+            <section id="tarjeta-pregunta" class="tarjeta-pregunta">
+    
+                <span class="mini-titulo">
+                    UNA PREGUNTA PARA TI
+                </span>
+    
+                <!-- JavaScript colocará aquí la pregunta -->
+                <h2 id="pregunta"></h2>
+    
+                <!-- JavaScript colocará aquí las respuestas -->
+                <div id="opciones" class="opciones">
+    
+                </div>
+    
+            </section>
+    
+        </div>
+    
+    </main>
+
+    <main id="vista-calculando" class="vista vista-calculando">
+
+        <div class="contenedor-calculando">
+    
+            <div class="loader"></div>
+    
+            <span class="mini-titulo">
+                EVALUACIÓN COMPLETADA
+            </span>
+    
+            <h2>
+                Calculando tu puntuación...
+            </h2>
+    
+            <p>
+                Estamos procesando tus respuestas.
+            </p>
+    
+        </div>
+    
+    </main>
+
+    <main id="vista-regalo" class="vista vista-regalo">
+
+        <!-- Decoración de fondo -->
+        <div class="burbuja burbuja-1"></div>
+        <div class="burbuja burbuja-2"></div>
+        <div class="burbuja burbuja-3"></div>
+    
+        <div class="contenedor-regalo">
+    
+            <span class="regalo-etiqueta">
+                RESULTADO DESBLOQUEADO
+            </span>
+    
+            <h2>Hay algo para ti...</h2>
+    
+            <p id="instruccion-regalo">
+                Toca el regalo para descubrirlo 🎁
+            </p>
+    
+    
+            <!-- ==================================
+                 CAJA DEL REGALO
+            =================================== -->
+    
+            <div id="regalo" class="regalo">
+    
+                <!-- Tapa -->
+                <div class="tapa-regalo">
+    
+                    <div class="lazo-horizontal"></div>
+    
+                    <div class="lazo">
+                        <div class="lazo-izquierdo"></div>
+                        <div class="lazo-derecho"></div>
+                    </div>
+    
+                </div>
+    
+    
+                <!-- Caja -->
+                <div class="caja-regalo">
+    
+                    <div class="cinta-regalo"></div>
+    
+                </div>
+    
+            </div>
+    
+    
+            <!-- Contador visual -->
+            <p id="contador-regalo" class="contador-regalo">
+                
+            </p>
+    
+        </div>
+    
+    </main>
+
+    <main id="vista-carta" class="vista vista-carta">
+
+        <div class="decoracion-carta decoracion-carta-1"></div>
+        <div class="decoracion-carta decoracion-carta-2"></div>
+    
+        <article class="carta-final">
+    
+            <div class="corazon-carta">
+                ♥
+            </div>
+    
+            <span class="detalle-carta">
+                PARA MI HERMANO
+            </span>
+    
+            <h1>
+                ¡Feliz Cumpleaños, Ali! 🎉
+            </h1>
+    
+            <div class="linea-carta"></div>
+    
+    
+            <div class="contenido-carta">
+    
+                <p>
+                    Hola hermano, espero que la estés pasando muy bien el día de hoy.
+                    Ante todo, ¡feliz cumpleaños! Quiero desearte el mejor de los días.
+                </p>
+    
+                <p>
+                    Hice este pequeño regalito como una forma de agradecer todo lo que
+                    has hecho por mí y lo buen hermano que has sido conmigo. Sabes que
+                    siempre voy a estar para ti, sin importar que a veces no nos
+                    comuniquemos mucho. Desde la distancia te mando un fuertísimo
+                    abrazo; sabes que te quiero demasiado y, aunque no seamos de las
+                    muestras de afecto más grandes, sabes que siempre puedes contar
+                    conmigo para lo que sea y que voy a estar para ti siempre.
+                </p>
+    
+                <p>
+                    Estoy muy orgulloso de ti. Eres mi ejemplo a seguir y siempre voy
+                    a estar pensando en el gran hermano que tengo. De verdad no tengo
+                    palabras para describir todo lo que siento por ti; eres una gran
+                    inspiración para mí y para mi carrera profesional. Espero que más
+                    adelante podamos convivir mucho más en persona y compartir muchos
+                    momentos más.
+                </p>
+    
+                <p>
+                    Y nada, cuídate mucho, espero que te haya gustado este regalo.
+                    Fue una idea que se me ocurrió para no dejar pasar tu cumpleaños
+                    en blanco.
+                </p>
+    
+                <p class="despedida">
+                    ¡Un abrazo enorme, Ali! Cuídate mucho.
+                </p>
+    
+            </div>
+    
+    
+            <div class="firma">
+    
+                <span>Atentamente,</span>
+    
+                <strong>
+                    Tu querido hermano, Dani.
+                </strong>
+    
+            </div>
+    
+        </article>
+    
+    </main>
+    <!-- ========================================
+         REPRODUCTOR DE MÚSICA
+         
+         No se muestran controles porque la música
+         será controlada mediante JavaScript.
+    ========================================= -->
+    <audio id="bg-music"></audio>
+
+
+    <!-- Archivo JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

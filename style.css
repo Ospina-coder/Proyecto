@@ -1,0 +1,1930 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f9;
+    color: #1f2937;
+}
+
+
+/* =========================================
+   SISTEMA DE VISTAS
+========================================= */
+
+.vista {
+    min-height: 100vh;
+    width: 100%;
+    display: none;
+
+    opacity: 0;
+
+    transition: opacity 0.5s ease;
+}
+
+.vista.activa {
+    display: flex;
+    opacity: 1;
+}
+
+
+/* =========================================
+   VISTA 1 - INICIO
+========================================= */
+
+#vista-inicio {
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2f7 0%,
+            #ffffff 50%,
+            #e8edf4 100%
+        );
+}
+
+.contenedor-inicio {
+    width: 100%;
+    max-width: 850px;
+}
+
+
+/* Encabezado institucional */
+
+.encabezado-institucional {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.logo-universidad {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #14213d;
+    color: white;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    border-radius: 8px;
+}
+
+.nombre-institucion {
+    font-weight: bold;
+    color: #14213d;
+}
+
+.codigo-sistema {
+    margin-top: 4px;
+
+    font-size: 13px;
+    color: #6b7280;
+}
+
+
+/* Tarjeta principal */
+
+.tarjeta-inicio {
+    background-color: white;
+
+    padding: 45px;
+
+    border-radius: 12px;
+
+    border: 1px solid #dde3ea;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.etiqueta {
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    margin-bottom: 20px;
+
+    background-color: #e8eef7;
+    color: #244a7c;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    border-radius: 20px;
+}
+
+.tarjeta-inicio h1 {
+    color: #14213d;
+
+    font-size: clamp(28px, 5vw, 42px);
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+.descripcion {
+    max-width: 650px;
+
+    color: #5b6472;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+
+/* Información de la evaluación */
+
+.informacion-prueba {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 35px;
+}
+
+.informacion-prueba div {
+    padding: 15px;
+
+    background-color: #f7f9fc;
+
+    border: 1px solid #e5e9ef;
+
+    border-radius: 8px;
+}
+
+.informacion-prueba span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #7b8492;
+
+    font-size: 12px;
+}
+
+.informacion-prueba strong {
+    color: #14213d;
+}
+
+
+/* Botón */
+
+.btn-principal {
+    width: 100%;
+
+    padding: 16px 25px;
+
+    border: none;
+    border-radius: 7px;
+
+    background-color: #14213d;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
+}
+
+.btn-principal:hover {
+    background-color: #1f3561;
+
+    transform: translateY(-2px);
+}
+
+
+/* Pie */
+
+.pie-institucional {
+    margin-top: 20px;
+
+    text-align: center;
+
+    color: #89919d;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+/* =========================================
+   VISTA 2 - BIENVENIDA REAL
+========================================= */
+
+.vista-calida {
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    background:
+        radial-gradient(circle at top left, #ffe7ec, transparent 40%),
+        radial-gradient(circle at bottom right, #ffe7c7, transparent 40%),
+        linear-gradient(135deg, #fff8f4, #fff);
+}
+
+
+.contenedor-bienvenida {
+    width: 100%;
+    max-width: 750px;
+}
+
+
+.tarjeta-bienvenida {
+    padding: 55px;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 60px rgba(99, 58, 68, 0.12);
+
+    text-align: center;
+}
+
+
+.detalle-cumple {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    padding: 7px 15px;
+
+    border-radius: 20px;
+
+    background-color: #fff0f3;
+
+    color: #b34b67;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+.tarjeta-bienvenida h2 {
+    margin-bottom: 25px;
+
+    font-size: clamp(32px, 6vw, 50px);
+
+    color: #512d38;
+}
+
+
+.mensaje-bienvenida {
+    max-width: 620px;
+
+    margin: 0 auto 35px;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    color: #66545a;
+}
+
+
+.btn-calido {
+    padding: 15px 45px;
+
+    border: none;
+    border-radius: 30px;
+
+    background-color: #b34b67;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.btn-calido:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(179, 75, 103, 0.25);
+}
+
+
+/* =========================================
+   VISTA 3 - QUIZ
+========================================= */
+
+.vista-quiz {
+    position: relative;
+
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    padding: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7f9,
+            #f8f3ff,
+            #fff9f0
+        );
+}
+
+
+.contenedor-quiz {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    max-width: 760px;
+}
+
+
+/* =========================================
+   INFORMACIÓN SUPERIOR
+========================================= */
+
+.quiz-superior {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 10px;
+
+    color: #735864;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   BARRA DE PROGRESO
+========================================= */
+
+.barra-progreso {
+    width: 100%;
+    height: 8px;
+
+    margin-bottom: 25px;
+
+    overflow: hidden;
+
+    background-color: rgba(255, 255, 255, 0.8);
+
+    border-radius: 20px;
+}
+
+
+.progreso {
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #d76b8a,
+            #a874c9
+        );
+
+    border-radius: 20px;
+
+    transition: width 0.5s ease;
+}
+
+
+/* =========================================
+   TARJETA DE PREGUNTA
+========================================= */
+
+.tarjeta-pregunta {
+    padding: 45px;
+
+    background-color: rgba(255, 255, 255, 0.95);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 55px rgba(69, 44, 65, 0.1);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.mini-titulo {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: #b15c7b;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.tarjeta-pregunta h2 {
+    margin-bottom: 30px;
+
+    color: #412f38;
+
+    font-size: clamp(24px, 5vw, 34px);
+
+    line-height: 1.35;
+}
+
+
+/* =========================================
+   RESPUESTAS
+========================================= */
+
+.opciones {
+    display: grid;
+
+    gap: 13px;
+}
+
+
+.opcion {
+    width: 100%;
+
+    padding: 17px 20px;
+
+    border: 2px solid #eee4e9;
+    border-radius: 12px;
+
+    background-color: white;
+
+    color: #51444a;
+
+    font-size: 15px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.opcion:hover {
+    border-color: #d69aae;
+
+    background-color: #fff8fa;
+
+    transform: translateX(4px);
+}
+
+
+/* Cuando se selecciona una respuesta */
+
+.opcion.seleccionada {
+    border-color: #b34b67;
+
+    background-color: #fff0f4;
+
+    color: #8f3853;
+
+    transform: scale(1.015);
+}
+
+
+/* =========================================
+   PARTÍCULAS DECORATIVAS
+========================================= */
+
+.particula {
+    position: absolute;
+
+    border-radius: 50%;
+
+    opacity: 0.25;
+
+    filter: blur(2px);
+
+    animation: flotar 7s ease-in-out infinite;
+}
+
+
+.particula-1 {
+    width: 180px;
+    height: 180px;
+
+    top: 8%;
+    left: 5%;
+
+    background-color: #f5a9bd;
+}
+
+
+.particula-2 {
+    width: 250px;
+    height: 250px;
+
+    right: 3%;
+    bottom: 5%;
+
+    background-color: #cbb0ef;
+
+    animation-delay: 2s;
+}
+
+
+.particula-3 {
+    width: 100px;
+    height: 100px;
+
+    right: 15%;
+    top: 10%;
+
+    background-color: #ffd99b;
+
+    animation-delay: 4s;
+}
+
+
+@keyframes flotar {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-25px);
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE DEL QUIZ
+========================================= */
+
+@media (max-width: 600px) {
+
+    .tarjeta-bienvenida {
+        padding: 35px 22px;
+    }
+
+    .mensaje-bienvenida {
+        font-size: 15px;
+    }
+
+    .tarjeta-pregunta {
+        padding: 30px 20px;
+    }
+
+    .opcion {
+        padding: 15px;
+    }
+
+ } /* =========================================
+   VISTA 4 - REGALO
+========================================= */
+
+.vista-regalo {
+    position: relative;
+
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    padding: 30px 20px;
+
+    background:
+        radial-gradient(circle at 20% 20%, #ffd1dc, transparent 35%),
+        radial-gradient(circle at 80% 80%, #d8c4ff, transparent 35%),
+        linear-gradient(135deg, #fff0f5, #fff7e8);
+}
+
+
+.contenedor-regalo {
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+}
+
+
+.regalo-etiqueta {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    padding: 7px 14px;
+
+    background-color: rgba(255,255,255,0.7);
+
+    border-radius: 30px;
+
+    color: #a34e6b;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.contenedor-regalo h2 {
+    margin-bottom: 10px;
+
+    color: #533440;
+
+    font-size: clamp(32px, 6vw, 52px);
+}
+
+
+#instruccion-regalo {
+    margin-bottom: 60px;
+
+    color: #80656f;
+}
+
+
+/* =========================================
+   CAJA DEL REGALO
+========================================= */
+
+.regalo {
+    position: relative;
+
+    width: 220px;
+    height: 190px;
+
+    margin: auto;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    transition: transform 0.2s ease;
+}
+
+
+.regalo:hover {
+    transform: scale(1.05);
+}
+
+
+/* CAJA */
+
+.caja-regalo {
+    position: absolute;
+
+    bottom: 0;
+
+    width: 200px;
+    height: 145px;
+
+    left: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d95d7b,
+            #b94363
+        );
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 20px 35px rgba(105, 49, 65, 0.25);
+}
+
+
+/* CINTA VERTICAL */
+
+.cinta-regalo {
+    position: absolute;
+
+    left: 50%;
+
+    width: 35px;
+    height: 100%;
+
+    transform: translateX(-50%);
+
+    background-color: #ffd98a;
+}
+
+
+/* =========================================
+   TAPA
+========================================= */
+
+.tapa-regalo {
+    position: absolute;
+
+    z-index: 3;
+
+    top: 25px;
+    left: 0;
+
+    width: 220px;
+    height: 50px;
+
+    background-color: #e76d89;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 7px 15px rgba(86, 39, 52, 0.2);
+
+    transition:
+        transform 0.7s ease,
+        opacity 0.7s ease;
+}
+
+
+.lazo-horizontal {
+    position: absolute;
+
+    left: 50%;
+
+    width: 40px;
+    height: 100%;
+
+    transform: translateX(-50%);
+
+    background-color: #ffe19b;
+}
+
+
+/* =========================================
+   LAZO
+========================================= */
+
+.lazo {
+    position: absolute;
+
+    top: -38px;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+
+.lazo-izquierdo,
+.lazo-derecho {
+    position: absolute;
+
+    width: 55px;
+    height: 40px;
+
+    background-color: #ffd77d;
+
+    border-radius: 50% 50% 10% 50%;
+}
+
+
+.lazo-izquierdo {
+    right: 2px;
+
+    transform: rotate(25deg);
+}
+
+
+.lazo-derecho {
+    left: 2px;
+
+    transform:
+        rotate(-25deg)
+        scaleX(-1);
+}
+
+
+/* =========================================
+   CONTADOR
+========================================= */
+
+.contador-regalo {
+    display: none;
+    margin-top: 25px;
+
+    color: #9b7381;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   SACUDIDA
+========================================= */
+
+@keyframes sacudir {
+
+    0% {
+        transform: translateX(0) rotate(0);
+    }
+
+    20% {
+        transform:
+            translateX(-5px)
+            rotate(-2deg);
+    }
+
+    40% {
+        transform:
+            translateX(5px)
+            rotate(2deg);
+    }
+
+    60% {
+        transform:
+            translateX(-5px)
+            rotate(-2deg);
+    }
+
+    80% {
+        transform:
+            translateX(5px)
+            rotate(2deg);
+    }
+
+    100% {
+        transform:
+            translateX(0)
+            rotate(0);
+    }
+
+}
+
+
+.regalo.sacudir {
+    animation: sacudir 0.25s linear;
+}
+
+
+/* =========================================
+   ABRIR REGALO
+========================================= */
+
+.regalo.abierto .tapa-regalo {
+    transform:
+        translateY(-120px)
+        rotate(-18deg);
+
+    opacity: 0;
+}
+
+
+.regalo.abierto .caja-regalo {
+    animation: desaparecerCaja 0.8s forwards;
+}
+
+
+@keyframes desaparecerCaja {
+
+    to {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================================
+   BURBUJAS DE FONDO
+========================================= */
+
+.burbuja {
+    position: absolute;
+
+    border-radius: 50%;
+
+    opacity: 0.25;
+
+    animation: flotar 6s ease-in-out infinite;
+}
+
+
+.burbuja-1 {
+    width: 200px;
+    height: 200px;
+
+    left: 5%;
+    top: 10%;
+
+    background-color: #ff92ad;
+}
+
+
+.burbuja-2 {
+    width: 300px;
+    height: 300px;
+
+    right: 3%;
+    bottom: 5%;
+
+    background-color: #a58be5;
+}
+
+
+.burbuja-3 {
+    width: 120px;
+    height: 120px;
+
+    right: 20%;
+    top: 8%;
+
+    background-color: #ffd477;
+}
+
+/* =========================================
+   VISTA 5 - CARTA FINAL
+========================================= */
+
+.vista-carta {
+    position: relative;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    min-height: 100vh;
+
+    padding: 70px 20px;
+
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(255, 198, 213, 0.55),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(208, 185, 255, 0.55),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #fff7f8,
+            #fffaf2
+        );
+}
+
+
+/* =========================================
+   HOJA DE LA CARTA
+========================================= */
+
+.carta-final {
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+    max-width: 800px;
+
+    padding: 65px 70px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffefb,
+            #fffaf5
+        );
+
+    border: 1px solid rgba(169, 111, 128, 0.18);
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 35px 90px rgba(79, 48, 58, 0.22),
+        0 8px 25px rgba(79, 48, 58, 0.10);
+
+    /*
+        La carta empieza pequeña,
+        como si estuviera saliendo
+        desde el regalo.
+    */
+
+    transform-origin: center bottom;
+
+    animation:
+        salirDelRegalo 1.4s
+        cubic-bezier(.17,.84,.32,1.18)
+        forwards;
+}
+
+
+/* =========================================
+   ANIMACIÓN DE SALIDA
+========================================= */
+
+@keyframes salirDelRegalo {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(350px)
+            scale(0.12)
+            rotate(-5deg);
+    }
+
+    35% {
+        opacity: 1;
+
+        transform:
+            translateY(180px)
+            scale(0.45)
+            rotate(3deg);
+    }
+
+    70% {
+        transform:
+            translateY(-20px)
+            scale(1.04)
+            rotate(-1deg);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1)
+            rotate(0);
+    }
+
+}
+
+
+/* =========================================
+   CORAZÓN SUPERIOR
+========================================= */
+
+.corazon-carta {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin:
+        -95px auto
+        35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d95d7b,
+            #b34b67
+        );
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 25px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(179, 75, 103, 0.3);
+
+    animation:
+        latido 2s ease-in-out infinite;
+}
+
+
+@keyframes latido {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+}
+
+
+/* =========================================
+   ENCABEZADO DE LA CARTA
+========================================= */
+
+.detalle-carta {
+    display: block;
+
+    margin-bottom: 12px;
+
+    text-align: center;
+
+    color: #b15c7b;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 4px;
+}
+
+
+.carta-final h1 {
+    max-width: 650px;
+
+    margin: auto;
+
+    text-align: center;
+
+    color: #4c3039;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(32px, 6vw, 50px);
+
+    line-height: 1.2;
+}
+
+
+/* Línea decorativa */
+
+.linea-carta {
+    width: 90px;
+    height: 3px;
+
+    margin:
+        28px auto
+        45px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #d96d89,
+            #c3a0e5
+        );
+}
+
+
+/* =========================================
+   TEXTO
+========================================= */
+
+.contenido-carta {
+    position: relative;
+}
+
+
+.contenido-carta p {
+    margin-bottom: 25px;
+
+    color: #5f5055;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 17px;
+
+    line-height: 1.95;
+
+    text-align: left;
+}
+
+
+/* Primer párrafo un poco destacado */
+
+.contenido-carta p:first-child {
+    color: #49383e;
+
+    font-size: 18px;
+}
+
+
+/* Despedida */
+
+.contenido-carta .despedida {
+    margin-top: 40px;
+
+    color: #4c3039;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   FIRMA
+========================================= */
+
+.firma {
+    margin-top: 45px;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid
+        rgba(160, 105, 120, 0.18);
+
+    text-align: right;
+}
+
+
+.firma span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #8b747c;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 14px;
+}
+
+
+.firma strong {
+    color: #a54662;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 20px;
+
+    font-style: italic;
+}
+
+
+/* =========================================
+   DECORACIÓN DEL FONDO
+========================================= */
+
+.decoracion-carta {
+    position: fixed;
+
+    border-radius: 50%;
+
+    filter: blur(3px);
+
+    opacity: 0.25;
+
+    animation:
+        flotarCarta
+        8s ease-in-out
+        infinite;
+}
+
+
+.decoracion-carta-1 {
+    width: 250px;
+    height: 250px;
+
+    top: 10%;
+    left: 3%;
+
+    background-color: #f4a7bb;
+}
+
+
+.decoracion-carta-2 {
+    width: 320px;
+    height: 320px;
+
+    right: 2%;
+    bottom: 5%;
+
+    background-color: #c4afea;
+
+    animation-delay: 2s;
+}
+
+
+@keyframes flotarCarta {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translateY(-25px)
+            scale(1.05);
+    }
+
+}
+
+
+/* =========================================
+   TEXTURA SUTIL DE PAPEL
+========================================= */
+
+.carta-final::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    border-radius: inherit;
+
+    opacity: 0.3;
+
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 28px,
+            rgba(173, 125, 137, 0.025) 29px
+        );
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .vista-carta {
+        padding:
+            55px 15px
+            35px;
+    }
+
+
+    .carta-final {
+        padding:
+            55px 25px
+            40px;
+    }
+
+
+    .corazon-carta {
+        margin-top: -85px;
+    }
+
+
+    .contenido-carta p {
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
+
+
+    .contenido-carta p:first-child {
+        font-size: 16px;
+    }
+
+
+    .firma strong {
+        font-size: 17px;
+    }
+
+}
+
+
+/* =========================================
+   HOJA DE LA CARTA
+========================================= */
+
+.carta-final {
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+    max-width: 800px;
+
+    padding: 65px 70px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffefb,
+            #fffaf5
+        );
+
+    border: 1px solid rgba(169, 111, 128, 0.18);
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 35px 90px rgba(79, 48, 58, 0.22),
+        0 8px 25px rgba(79, 48, 58, 0.10);
+
+    /*
+        La carta empieza pequeña,
+        como si estuviera saliendo
+        desde el regalo.
+    */
+
+    transform-origin: center bottom;
+
+    animation:
+        salirDelRegalo 1.4s
+        cubic-bezier(.17,.84,.32,1.18)
+        forwards;
+}
+
+
+/* =========================================
+   ANIMACIÓN DE SALIDA
+========================================= */
+
+@keyframes salirDelRegalo {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(350px)
+            scale(0.12)
+            rotate(-5deg);
+    }
+
+    35% {
+        opacity: 1;
+
+        transform:
+            translateY(180px)
+            scale(0.45)
+            rotate(3deg);
+    }
+
+    70% {
+        transform:
+            translateY(-20px)
+            scale(1.04)
+            rotate(-1deg);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1)
+            rotate(0);
+    }
+
+}
+
+
+/* =========================================
+   CORAZÓN SUPERIOR
+========================================= */
+
+.corazon-carta {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin:
+        -95px auto
+        35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d95d7b,
+            #b34b67
+        );
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 25px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(179, 75, 103, 0.3);
+
+    animation:
+        latido 2s ease-in-out infinite;
+}
+
+
+@keyframes latido {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+}
+
+
+/* =========================================
+   ENCABEZADO DE LA CARTA
+========================================= */
+
+.detalle-carta {
+    display: block;
+
+    margin-bottom: 12px;
+
+    text-align: center;
+
+    color: #b15c7b;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 4px;
+}
+
+
+.carta-final h1 {
+    max-width: 650px;
+
+    margin: auto;
+
+    text-align: center;
+
+    color: #4c3039;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(32px, 6vw, 50px);
+
+    line-height: 1.2;
+}
+
+
+/* Línea decorativa */
+
+.linea-carta {
+    width: 90px;
+    height: 3px;
+
+    margin:
+        28px auto
+        45px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #d96d89,
+            #c3a0e5
+        );
+}
+
+
+/* =========================================
+   TEXTO
+========================================= */
+
+.contenido-carta {
+    position: relative;
+}
+
+
+.contenido-carta p {
+    margin-bottom: 25px;
+
+    color: #5f5055;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 17px;
+
+    line-height: 1.95;
+
+    text-align: left;
+}
+
+
+/* Primer párrafo un poco destacado */
+
+.contenido-carta p:first-child {
+    color: #49383e;
+
+    font-size: 18px;
+}
+
+
+/* Despedida */
+
+.contenido-carta .despedida {
+    margin-top: 40px;
+
+    color: #4c3039;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   FIRMA
+========================================= */
+
+.firma {
+    margin-top: 45px;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid
+        rgba(160, 105, 120, 0.18);
+
+    text-align: right;
+}
+
+
+.firma span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #8b747c;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 14px;
+}
+
+
+.firma strong {
+    color: #a54662;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 20px;
+
+    font-style: italic;
+}
+
+
+/* =========================================
+   DECORACIÓN DEL FONDO
+========================================= */
+
+.decoracion-carta {
+    position: fixed;
+
+    border-radius: 50%;
+
+    filter: blur(3px);
+
+    opacity: 0.25;
+
+    animation:
+        flotarCarta
+        8s ease-in-out
+        infinite;
+}
+
+
+.decoracion-carta-1 {
+    width: 250px;
+    height: 250px;
+
+    top: 10%;
+    left: 3%;
+
+    background-color: #f4a7bb;
+}
+
+
+.decoracion-carta-2 {
+    width: 320px;
+    height: 320px;
+
+    right: 2%;
+    bottom: 5%;
+
+    background-color: #c4afea;
+
+    animation-delay: 2s;
+}
+
+
+@keyframes flotarCarta {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translateY(-25px)
+            scale(1.05);
+    }
+
+}
+
+
+/* =========================================
+   TEXTURA SUTIL DE PAPEL
+========================================= */
+
+.carta-final::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    border-radius: inherit;
+
+    opacity: 0.3;
+
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 28px,
+            rgba(173, 125, 137, 0.025) 29px
+        );
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .vista-carta {
+        padding:
+            55px 15px
+            35px;
+    }
+
+
+    .carta-final {
+        padding:
+            55px 25px
+            40px;
+    }
+
+
+    .corazon-carta {
+        margin-top: -85px;
+    }
+
+
+    .contenido-carta p {
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
+
+
+    .contenido-carta p:first-child {
+        font-size: 16px;
+    }
+
+
+    .firma strong {
+        font-size: 17px;
+    }
+
+}
+
+/* =========================================
+   PANTALLA CALCULANDO
+========================================= */
+
+.vista-calculando {
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7f9,
+            #f8f3ff,
+            #fff9f0
+        );
+}
+
+
+.contenedor-calculando {
+    text-align: center;
+}
+
+
+.contenedor-calculando h2 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+    color: #412f38;
+
+    font-size: clamp(28px, 5vw, 42px);
+}
+
+
+.contenedor-calculando p {
+    color: #776770;
+}
+
+
+/* Círculo de carga */
+
+.loader {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 30px;
+
+    border: 5px solid #f0dce3;
+    border-top-color: #b34b67;
+
+    border-radius: 50%;
+
+    animation: girar 0.8s linear infinite;
+}
+
+
+@keyframes girar {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
